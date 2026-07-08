@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://studyinkross-hub.github.io/kross/sitemap.xml
+Sitemap: https://studyinkross-hub.github.io/duhockross/sitemap.xml

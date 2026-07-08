@@ -1,29 +1,42 @@
-# KROSS Redesign v2 Fixed
+# KROSS Official Homepage v2 + Mini Fit Check
 
-## 바로 배포하는 방법
+## 구성
+- `index.html`: 공식 홈페이지 메인
+- `assets/css/kross-v2.css`: 공통 디자인
+- `assets/js/kross-v2.js`: 메뉴, 상담 폼, 미니 유학 적합성 진단 로직
+- `truong/dai-hoc-kwangwoon.html`: 학교 상세 페이지 예시
+- `robots.txt`, `sitemap.xml`: GitHub Pages SEO 기본 파일
+- `index_preview_single_file.html`: 로컬 미리보기용 단일 파일
 
-GitHub Pages 레포의 루트에 아래 구조 그대로 업로드하세요.
+## 새로 추가된 기능
+홈 상단 신뢰바 바로 아래에 `3분 유학 적합성 미니 진단` 섹션을 추가했습니다.
 
-```
+진단 항목:
+1. 학력
+2. GPA
+3. 출석/공백
+4. 한국어/TOPIK
+5. 예산
+6. 출국 희망 시기
+
+결과:
+- D-4 학습비자 우선
+- D-2 전문과정 검토
+- 베트남에서 준비 후 진행
+
+## 주의
+결과 문구에는 비자/입학 보장 표현을 넣지 않았습니다. 실제 상담에서는 공식 모집요강, 영사관/출입국 기준 확인이 필요합니다.
+
+## 업로드 방법
+GitHub repo 루트에 아래가 바로 보이게 올리세요.
+
+```text
 index.html
+assets/
+truong/
 robots.txt
 sitemap.xml
-assets/css/kross-v2.css
-assets/js/kross-v2.js
-assets/og-cover.png
-truong/dai-hoc-kwangwoon.html
+README.md
 ```
 
-## 오류 방지 체크
-
-1. `index.html`만 올리면 CSS/JS가 깨집니다. 반드시 `assets` 폴더도 같이 올리세요.
-2. `truong/dai-hoc-kwangwoon.html`을 쓰려면 `truong` 폴더 구조를 유지하세요.
-3. `assets/js/kross-v2.js`의 `gasWebhookUrl`을 실제 GAS 배포 URL로 바꾸기 전에는 폼이 test mode 메시지만 보여줍니다.
-4. `0900000000`은 실제 KROSS Hotline/Zalo 번호로 교체하세요.
-5. GitHub Pages가 `/kross/` 경로라면 지금 구조 그대로 사용하면 됩니다.
-
-## 금지어 검사
-
-- đào tạo: 0건
-- học phí: 0건
-- đậu visa: 0건
+`assets` 폴더 없이 `index.html`만 올리면 디자인이 깨집니다.
