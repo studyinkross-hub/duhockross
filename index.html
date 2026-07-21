@@ -1,344 +1,422 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Du học Hàn Quốc tại Đà Nẵng | KROSS — Lộ trình D-4, D-2 & việc làm</title>
-<meta name="description" content="KROSS Đà Nẵng đồng hành từ tiếng Hàn, visa D-4, D-2, chọn trường Hàn Quốc đến kết nối việc làm sau tốt nghiệp. Nhận lộ trình du học miễn phí qua Zalo.">
-<link rel="canonical" href="https://studyinkross-hub.github.io/kross/">
-<meta name="robots" content="index, follow, max-image-preview:large">
-
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="KROSS Du học Hàn Quốc">
-<meta property="og:title" content="Du học Hàn Quốc tại Đà Nẵng | KROSS">
-<meta property="og:description" content="Một lộ trình duy nhất: tiếng Hàn → visa D-4 → visa D-2 → việc làm tại Hàn Quốc.">
-<meta property="og:url" content="https://studyinkross-hub.github.io/kross/">
-<meta property="og:image" content="https://studyinkross-hub.github.io/kross/assets/og-cover.png">
-<meta name="twitter:card" content="summary_large_image">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"KROSS — Tư vấn du học Hàn Quốc",
-  "description":"Tư vấn du học Hàn Quốc visa D-4 và D-2, hỗ trợ ngôn ngữ tiếng Hàn, kết nối việc làm sau tốt nghiệp.",
-  "url":"https://studyinkross-hub.github.io/kross/",
-  "areaServed":["Đà Nẵng","Việt Nam"],
-  "address":{"@type":"PostalAddress","streetAddress":"282 Nguyễn Tri Phương, Thạc Gián","addressLocality":"Đà Nẵng","addressCountry":"VN"},
-  "serviceType":["Tư vấn du học Hàn Quốc","Hỗ trợ hồ sơ visa D-4","Hỗ trợ hồ sơ visa D-2"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Chưa biết tiếng Hàn có thể bắt đầu lộ trình du học Hàn Quốc không?","acceptedAnswer":{"@type":"Answer","text":"Có. Học viên có thể bắt đầu bằng chương trình hỗ trợ ngôn ngữ tại KROSS Đà Nẵng, sau đó chuẩn bị hồ sơ visa D-4 để học tiếng tại viện ngôn ngữ của trường đại học Hàn Quốc."}},
-    {"@type":"Question","name":"Visa D-4 và D-2 khác nhau như thế nào?","acceptedAnswer":{"@type":"Answer","text":"Visa D-4 phù hợp với giai đoạn học tiếng Hàn tại Hàn Quốc. Visa D-2 phù hợp với chương trình cử nhân hoặc thạc sĩ và thường yêu cầu năng lực tiếng Hàn theo điều kiện từng trường."}},
-    {"@type":"Question","name":"KROSS có công bố chi phí không?","acceptedAnswer":{"@type":"Answer","text":"KROSS cung cấp khoảng chi phí tham khảo trên website và gửi bảng chi tiết theo từng trường, từng kỳ sau khi đánh giá hồ sơ trong buổi tư vấn miễn phí."}}
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/kross-v2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KROSS 어학, 유학, 인력 통합 CRM 운영 프로토타입">
+  <title>KROSS Flow CRM</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<a class="skip-link" href="#main">Bỏ qua menu</a>
-<header class="header">
-  <div class="wrap nav">
-    <a class="logo" href="./" aria-label="KROSS trang chủ">
-      <span class="logo-mark"><span class="logo-plane" aria-hidden="true"></span></span>
-      <span class="logo-text">KR<em>O</em>SS<span class="logo-sub">From Dream to Goal</span></span>
-    </a>
-    <ul class="nav-links" aria-label="Menu chính">
-      <li><a href="#lo-trinh">Lộ trình</a></li>
-      <li><a href="#truong">Trường</a></li>
-      <li><a href="#chi-phi">Chi phí</a></li>
-      <li><a href="#visa">Visa</a></li>
-      <li><a href="#hoc-vien">Học viên</a></li>
-      <li><a href="#faq">Hỏi đáp</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a class="btn btn-ghost" href="tel:0900000000">Gọi ngay</a>
-      <a class="btn btn-primary" href="#tu-van">Nhận lộ trình</a>
-    </div>
-    <button class="menu-btn" type="button" onclick="openDrawer()" aria-label="Mở menu">☰</button>
+  <div class="login-gate" id="loginGate" aria-hidden="false">
+    <section class="login-panel" aria-labelledby="loginTitle">
+      <div class="login-brand" aria-label="KROSS From Dream to Goal">
+        <img src="assets/kross-logo.png" alt="KROSS From Dream to Goal">
+      </div>
+      <div class="login-copy">
+        <p class="section-kicker">KROSS STAFF WORKSPACE</p>
+        <h1 id="loginTitle">직원 CRM 로그인</h1>
+        <p>승인된 KROSS 직원 계정으로 접속하세요.</p>
+      </div>
+      <form id="loginForm" novalidate>
+        <label class="login-field">
+          <span>이메일</span>
+          <input id="loginId" name="loginId" type="email" autocomplete="email" required placeholder="직원 이메일">
+        </label>
+        <label class="login-field">
+          <span>비밀번호</span>
+          <span class="password-field">
+            <input id="loginPassword" name="loginPassword" type="password" autocomplete="current-password" required placeholder="비밀번호">
+            <button type="button" id="togglePassword" aria-label="비밀번호 보기" title="비밀번호 보기">◉</button>
+          </span>
+        </label>
+        <p class="login-error" id="loginError" role="alert"></p>
+        <button class="primary-button login-submit" type="submit">CRM 접속</button>
+      </form>
+      <div class="login-footer">
+        <span>내부 직원 전용</span>
+        <div class="language-switch login-language" role="group" aria-label="언어 선택">
+          <button class="active" type="button" data-language="ko" title="한국어">KO</button>
+          <button type="button" data-language="vi" title="Tiếng Việt">VI</button>
+        </div>
+      </div>
+    </section>
   </div>
-</header>
 
-<div class="drawer" id="drawer" aria-hidden="true">
-  <div class="drawer-panel" role="dialog" aria-label="Menu di động">
-    <div class="drawer-head">
-      <a class="logo" href="./" data-close-drawer>
-        <span class="logo-mark"><span class="logo-plane" aria-hidden="true"></span></span>
-        <span class="logo-text">KR<em>O</em>SS<span class="logo-sub">From Dream to Goal</span></span>
-      </a>
-      <button class="drawer-close" type="button" onclick="closeDrawer()" aria-label="Đóng menu">×</button>
-    </div>
-    <ul class="drawer-links">
-      <li><a href="#lo-trinh" data-close-drawer>Lộ trình <span>→</span></a></li>
-      <li><a href="#truong" data-close-drawer>Trường đại học <span>→</span></a></li>
-      <li><a href="#chi-phi" data-close-drawer>Chi phí tham khảo <span>→</span></a></li>
-      <li><a href="#visa" data-close-drawer>Visa D-4 / D-2 <span>→</span></a></li>
-      <li><a href="#hoc-vien" data-close-drawer>Học viên KROSS <span>→</span></a></li>
-      <li><a href="#faq" data-close-drawer>Hỏi đáp <span>→</span></a></li>
-    </ul>
-    <div class="drawer-cta">
-      <a class="btn btn-primary" href="#tu-van" data-close-drawer>Đăng ký tư vấn miễn phí</a>
-      <a class="btn btn-ghost" href="https://zalo.me/0900000000">Nhắn Zalo KROSS</a>
-    </div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-logo" aria-label="KROSS From Dream to Goal">
+          <img src="assets/kross-logo.png" alt="KROSS From Dream to Goal">
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span><span>운영 현황</span></button>
+        <button class="nav-item" data-view="students"><span class="nav-icon">◎</span><span>학생 통합관리</span></button>
+        <button class="nav-item" data-view="learning"><span class="nav-icon">▤</span><span>어학 운영</span></button>
+        <button class="nav-item" data-view="topik"><span class="nav-icon">✎</span><span>TOPIK 분석</span></button>
+        <button class="nav-item" data-view="study"><span class="nav-icon">◇</span><span>유학 적합도</span></button>
+        <button class="nav-item" data-view="paid"><span class="nav-icon">₫</span><span>유료 상담</span></button>
+        <button class="nav-item" data-view="workforce"><span class="nav-icon">⇄</span><span>인력 전환</span></button>
+        <button class="nav-item" data-view="reports"><span class="nav-icon">▥</span><span>보고서 센터</span></button>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><strong>운영 기준 v0.1</strong><span>어학 → 유학 → 인력</span></div>
+      </div>
+      <button class="user-block" id="logoutButton" title="로그아웃">
+        <span class="avatar" id="currentUserAvatar">KR</span>
+        <span><strong id="currentUserName">KROSS Staff</strong><small id="currentUserRole">직원</small></span>
+        <span class="chevron">↪</span>
+      </button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button mobile-only" id="menuToggle" aria-label="메뉴 열기" title="메뉴 열기">☰</button>
+        <div class="page-title">
+          <p id="pageEyebrow">오늘의 운영</p>
+          <h1 id="pageTitle">운영 현황</h1>
+        </div>
+        <div class="top-actions">
+          <div class="language-switch" role="group" aria-label="언어 선택">
+            <button class="active" type="button" data-language="ko" title="한국어">KO</button>
+            <button type="button" data-language="vi" title="Tiếng Việt">VI</button>
+          </div>
+          <label class="global-search">
+            <span>⌕</span>
+            <input id="globalSearch" type="search" placeholder="학생명 또는 연락처 검색" autocomplete="off">
+          </label>
+          <button class="icon-button notification-button" title="알림" aria-label="알림">♧<span>3</span></button>
+          <button class="primary-button" id="addStudentButton"><span>＋</span> 학생 등록</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="view-overview">
+          <div class="overview-strip">
+            <div>
+              <p class="section-kicker" id="overviewDate">오늘 운영 기준 · 실시간 데이터</p>
+              <h2>오늘 놓치면 안 되는 일부터 정리했습니다.</h2>
+            </div>
+            <button class="secondary-button" data-go="learning">출결 입력 시작 <span>→</span></button>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-top"><span class="metric-icon green">◎</span><span class="trend good">실시간</span></div>
+              <p>전체 활성 학생</p><strong id="metricStudents">0</strong><small>현재 CRM 등록 기준</small>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span class="metric-icon blue">✓</span><span class="trend good">실시간</span></div>
+              <p>이번 달 평균 출석률</p><strong id="metricAttendance">0%</strong><small id="metricAttendanceNote">출결 기록 없음</small>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span class="metric-icon amber">△</span><span class="trend warn" id="metricRiskTrend">0명 확인</span></div>
+              <p>학습 위험 학생</p><strong id="metricRisk">0</strong><small>출결·성적·태도 복합 판정</small>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span class="metric-icon coral">↗</span><span class="trend good">평가 완료</span></div>
+              <p>유학 전환 후보</p><strong id="metricStudy">0</strong><small>어학 단계·적합도 70점 이상</small>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel pipeline-panel">
+              <div class="panel-header">
+                <div><p class="section-kicker">통합 여정</p><h3>파이프라인 현황</h3></div>
+                <button class="text-button" data-go="students">전체 학생 보기 →</button>
+              </div>
+              <div class="pipeline-stages">
+                <button data-filter-stage="상담"><span>01</span><strong>상담·진단</strong><em id="pipelineConsultation">0</em><small>현재 등록</small></button>
+                <button data-filter-stage="어학"><span>02</span><strong>어학 과정</strong><em id="pipelineLanguage">0</em><small id="pipelineLanguageRisk">위험 0</small></button>
+                <button data-filter-stage="유학"><span>03</span><strong>유학 준비</strong><em id="pipelineStudy">0</em><small>실제 단계 기준</small></button>
+                <button data-filter-stage="인력"><span>04</span><strong>인력 전환</strong><em id="pipelineWorkforce">0</em><small>실제 단계 기준</small></button>
+              </div>
+              <div class="chart-area" aria-label="현재 단계별 학생 분포">
+                <div class="chart-y"><span>100%</span><span>67%</span><span>33%</span><span>0</span></div>
+                <div class="bars">
+                  <div><span id="pipelineBarConsultation" style="--h:0%"></span><small>상담</small></div>
+                  <div><span id="pipelineBarLanguage" class="current" style="--h:0%"></span><small>어학</small></div>
+                  <div><span id="pipelineBarStudy" style="--h:0%"></span><small>유학</small></div>
+                  <div><span id="pipelineBarWorkforce" style="--h:0%"></span><small>인력</small></div>
+                </div>
+              </div>
+              <div class="chart-legend"><span><i class="legend-current"></i>현재 파이프라인 분포</span><strong id="pipelineTotal">총 0명</strong></div>
+            </section>
+
+            <section class="panel attention-panel">
+              <div class="panel-header">
+                <div><p class="section-kicker">우선 조치</p><h3>오늘의 확인 항목</h3></div>
+                <span class="count-badge" id="attentionCount">0건</span>
+              </div>
+              <div class="attention-list" id="attentionList"></div>
+              <button class="full-text-button">모든 업무 보기 <span>→</span></button>
+            </section>
+          </div>
+
+          <section class="panel recent-panel">
+            <div class="panel-header">
+              <div><p class="section-kicker">최근 변화</p><h3>학생 진행 현황</h3></div>
+              <div class="segmented" role="group" aria-label="학생 현황 필터">
+                <button class="active" data-recent-filter="all">전체</button>
+                <button data-recent-filter="risk">주의</button>
+                <button data-recent-filter="progress">단계 이동</button>
+              </div>
+            </div>
+            <div class="table-wrap"><table><thead><tr><th>학생</th><th>현재 과정</th><th>최근 지표</th><th>파이프라인</th><th>담당자</th><th></th></tr></thead><tbody id="recentStudentsBody"></tbody></table></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-students">
+          <div class="view-toolbar">
+            <div><p class="section-kicker">단일 학생 기록</p><h2>학생 통합관리</h2><p>상담부터 취업까지 모든 이력을 한 프로필에서 관리합니다.</p></div>
+            <button class="primary-button" id="addStudentButtonSecondary"><span>＋</span> 학생 등록</button>
+          </div>
+          <div class="filter-row">
+            <label class="search-field"><span>⌕</span><input id="studentSearch" type="search" placeholder="학생 검색"></label>
+            <select id="stageFilter" aria-label="파이프라인 단계"><option value="all">전체 단계</option><option>상담</option><option>어학</option><option>유학</option><option>인력</option></select>
+            <select id="riskFilter" aria-label="위험도"><option value="all">전체 위험도</option><option value="안정">안정</option><option value="관찰">관찰</option><option value="주의">주의</option></select>
+            <span class="filter-count" id="studentCount"></span>
+          </div>
+          <section class="panel student-list-panel">
+            <div class="table-wrap"><table><thead><tr><th>학생</th><th>연락처</th><th>과정</th><th>출석률</th><th>최근 성적</th><th>현재 단계</th><th>상태</th><th></th></tr></thead><tbody id="studentTableBody"></tbody></table></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-learning">
+          <div class="view-toolbar">
+            <div><p class="section-kicker">수업 운영</p><h2>시간표·출결 통합관리</h2><p>반복 시간표에서 실제 수업을 선택해 출결, 태도와 시험 결과를 기록합니다.</p></div>
+            <button class="primary-button" id="addScheduleButton"><span>＋</span> 시간표 등록</button>
+          </div>
+
+          <section class="panel schedule-panel">
+            <div class="panel-header schedule-panel-header">
+              <div><p class="section-kicker">통합 일정</p><h3>주간 시간표</h3></div>
+              <span class="schedule-status" id="scheduleStatus">시간표 데이터 확인 중</span>
+            </div>
+            <div class="schedule-filters">
+              <select id="scheduleTeacherFilter" aria-label="교사 필터"><option value="all">전체 교사</option></select>
+              <select id="scheduleCourseFilter" aria-label="과정 필터"><option value="all">전체 과정</option></select>
+              <button class="secondary-button" id="scheduleToday" type="button">이번 주</button>
+            </div>
+            <div class="schedule-board-wrap">
+              <div class="schedule-board" id="scheduleBoard" aria-label="월요일부터 일요일까지 주간 시간표"></div>
+            </div>
+            <div class="schedule-legend"><span><i class="schedule-dot language"></i>일반 어학</span><span><i class="schedule-dot topik"></i>TOPIK</span><span><i class="schedule-dot conflict"></i>일정 확인 필요</span></div>
+          </section>
+
+          <div class="attendance-toolbar panel">
+            <label><span>수업 날짜</span><input id="attendanceDate" type="date"></label>
+            <label class="session-field"><span>수업 선택</span><select id="classSelect" aria-label="수업 선택"><option value="">등록된 수업을 선택하세요</option></select></label>
+            <label><span>수업 내용</span><input id="lessonTitle" type="text" placeholder="오늘 수업 주제"></label>
+            <button class="primary-button" id="saveAttendance" type="button">기록 저장</button>
+          </div>
+          <div class="learning-summary">
+            <div><span>선택 수업</span><strong id="learningSessionTime">-</strong><small id="learningSessionName">시간표에서 수업을 선택하세요</small></div>
+            <div><span>재적</span><strong id="learningEnrollmentCount">0명</strong><small id="learningInputCount">입력 대기</small></div>
+            <div><span>담당 교사</span><strong id="learningTeacher">-</strong><small id="learningRoom">강의실 미지정</small></div>
+            <div><span>미제출 과제</span><strong class="danger-text" id="learningMissingHomework">0건</strong><small>선택 수업 입력 기준</small></div>
+          </div>
+          <section class="panel attendance-panel">
+            <div class="panel-header"><div><p class="section-kicker" id="attendanceSessionLabel">수업을 선택하세요</p><h3>빠른 출결 입력</h3></div><div class="attendance-legend"><span><i class="present-dot"></i>출석</span><span><i class="late-dot"></i>지각</span><span><i class="absent-dot"></i>결석</span></div></div>
+            <div class="attendance-list" id="attendanceList"></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-topik">
+          <div class="view-toolbar">
+            <div><p class="section-kicker">성과 예측</p><h2>TOPIK 분석</h2><p>모의고사 추세와 쓰기 평가를 함께 사용해 목표 등급 가능성을 판단합니다.</p></div>
+            <span class="review-badge"><span class="status-dot"></span>AI 결과는 교사 승인 후 확정</span>
+          </div>
+          <div class="topik-grid">
+            <section class="panel probability-panel">
+              <div class="panel-header"><div><p class="section-kicker">모의고사 4회 기반</p><h3>합격 확률</h3></div><select id="topikStudentSelect" aria-label="학생 선택"></select></div>
+              <div class="probability-display"><div class="probability-ring" id="probabilityRing"><span><strong id="probabilityValue">78%</strong><small>목표 4급</small></span></div><div class="probability-copy"><span class="positive-label">상승 추세</span><h4 id="probabilityTitle">현재 페이스 유지 시 합격 가능성이 높습니다.</h4><p id="probabilityNote">쓰기 54번 점수가 평균보다 낮아 주 2회 첨삭을 권장합니다.</p></div></div>
+              <div class="score-trend" id="scoreTrend"></div>
+            </section>
+            <section class="panel prediction-factors">
+              <div class="panel-header"><div><p class="section-kicker">설명 가능한 예측</p><h3>판정 기여 요인</h3></div></div>
+              <div class="factor-list" id="factorList"></div>
+              <div class="model-note"><strong>판정 원칙</strong><p>최근 성적, 변동폭, 출석, 과제 수행률을 사용합니다. 국적·성별 등 민감정보는 예측에 사용하지 않습니다.</p></div>
+            </section>
+          </div>
+
+          <section class="panel topik-score-panel">
+            <div class="panel-header"><div><p class="section-kicker">교사 입력 데이터</p><h3>TOPIK 모의고사 점수</h3></div><span class="count-badge" id="topikResultCount">0회</span></div>
+            <form id="topikScoreForm" class="topik-score-form">
+              <label class="field-label">시험일<input name="examDate" type="date" required></label>
+              <label class="field-label">목표 등급<select name="targetLevel" required><option value="1">1급</option><option value="2">2급</option><option value="3">3급</option><option value="4" selected>4급</option><option value="5">5급</option><option value="6">6급</option></select></label>
+              <label class="field-label">듣기<input name="listeningScore" type="number" min="0" max="100" required placeholder="0-100"></label>
+              <label class="field-label">읽기<input name="readingScore" type="number" min="0" max="100" required placeholder="0-100"></label>
+              <label class="field-label" id="topikWritingScoreField">쓰기<input name="writingScore" type="number" min="0" max="100" placeholder="0-100"></label>
+              <div class="topik-score-actions"><button type="button" class="secondary-button" id="cancelTopikEdit" hidden>수정 취소</button><button type="submit" class="primary-button" id="saveTopikScore">점수 저장</button></div>
+            </form>
+            <div class="topik-result-list" id="topikResultList"></div>
+          </section>
+
+          <section class="panel writing-panel" id="topikWritingPanel">
+            <div class="panel-header"><div><p class="section-kicker">TOPIK II 쓰기</p><h3>손글씨 답안 평가 작업대</h3></div><span class="count-badge">교사 검토 필수</span></div>
+            <div class="writing-workspace">
+              <div class="upload-column">
+                <label class="upload-zone" id="uploadZone" for="writingImage">
+                  <input id="writingImage" type="file" accept="image/*" hidden>
+                  <div id="uploadPlaceholder"><span class="upload-icon">⇧</span><strong>답안 사진을 업로드하세요</strong><small>JPG, PNG · 글자가 선명한 정면 사진</small><em>파일 선택</em></div>
+                  <img id="writingPreview" alt="업로드한 TOPIK 쓰기 답안 미리보기">
+                </label>
+                <button class="secondary-button full-button" id="analyzeWriting" disabled>AI 예상 점수 분석</button>
+              </div>
+              <div class="rubric-column" id="rubricColumn">
+                <div class="empty-analysis"><span>✎</span><strong>분석 결과가 여기에 표시됩니다.</strong><p>문법 활용, 띄어쓰기·표기, 문장 완성도, 과제 수행을 항목별로 검토합니다.</p></div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-study">
+          <div class="view-toolbar">
+            <div><p class="section-kicker">진로 의사결정</p><h2>유학 적합도 검사</h2><p>D4, D2-1·2, D2-3 요건을 분리해 적합도와 보완 과제를 판단합니다.</p></div>
+            <button class="secondary-button" id="resetAssessment">평가 초기화</button>
+          </div>
+          <div class="assessment-layout">
+            <section class="panel assessment-form-panel">
+              <div class="panel-header"><div><p class="section-kicker">5개 축 · 100점</p><h3>학생 정보 입력</h3></div><select id="assessmentStudent" aria-label="평가 학생 선택"></select></div>
+              <form id="assessmentForm" class="assessment-form">
+                <label><span>최종 학력·성적 적합성 <em>25점</em></span><input name="academic" type="range" min="0" max="25" value="18"><output>18</output></label>
+                <label><span>한국어 역량 <em>25점</em></span><input name="language" type="range" min="0" max="25" value="17"><output>17</output></label>
+                <label><span>재정 증빙 가능성 <em>20점</em></span><input name="finance" type="range" min="0" max="20" value="14"><output>14</output></label>
+                <label><span>학업계획·동기 일관성 <em>20점</em></span><input name="motivation" type="range" min="0" max="20" value="16"><output>16</output></label>
+                <label><span>서류·비자 위험도 <em>10점</em></span><input name="documents" type="range" min="0" max="10" value="7"><output>7</output></label>
+              </form>
+              <button class="primary-button full-button" id="calculateSuitability">적합도 계산</button>
+            </section>
+            <section class="panel assessment-result-panel">
+              <div class="score-orbit" id="suitabilityOrbit"><span><strong id="suitabilityScore">72</strong><small>/ 100</small></span></div>
+              <span class="result-label" id="suitabilityLabel">조건부 적합</span>
+              <h3 id="suitabilityTrack">D2-1·D2-2 진학 준비 권장</h3>
+              <p id="suitabilitySummary">학업 목표와 한국어 역량은 양호합니다. 재정 증빙과 서류 일관성을 보완한 후 지원 학교를 확정하세요.</p>
+              <div class="recommendation-list" id="recommendationList"></div>
+              <button class="secondary-button full-button" id="saveAssessment">판정 저장</button>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-paid">
+          <div class="view-toolbar">
+            <div><p class="section-kicker">500K 유학 분석</p><h2>유료 상담 관리</h2><p>결제 확인부터 적합도 분석, 직원 검토와 보고서 전달까지 한곳에서 관리합니다.</p></div>
+            <div class="toolbar-actions">
+              <button class="secondary-button" id="importPaidAssessment" title="CRM JSON 가져오기"><span>⇧</span> 결과 가져오기</button>
+              <input id="paidAssessmentFile" type="file" accept=".json,application/json" hidden>
+              <button class="primary-button" id="openPaidAssessment"><span>↗</span> 고객용 검사 열기</button>
+            </div>
+          </div>
+
+          <div class="paid-summary">
+            <div><span>전체 신청</span><strong id="paidMetricTotal">0</strong><small>누적 유료 상담</small></div>
+            <div><span>결제 확인</span><strong id="paidMetricPayment">0</strong><small>500,000 VND 확인</small></div>
+            <div><span>직원 검토</span><strong id="paidMetricReview">0</strong><small>보고서 승인 대기</small></div>
+            <div><span>전달 완료</span><strong id="paidMetricComplete">0</strong><small>학생 전달 기준</small></div>
+          </div>
+
+          <div class="filter-row paid-filter-row">
+            <label class="search-field"><span>⌕</span><input id="paidAssessmentSearch" type="search" placeholder="신청자·연락처·영수증 검색"></label>
+            <select id="paidAssessmentStatus" aria-label="유료 상담 상태"><option value="all">전체 상태</option><option value="검토 중">검토 중</option><option value="보고서 준비">보고서 준비</option><option value="전달 완료">전달 완료</option></select>
+            <span class="filter-count" id="paidAssessmentCount"></span>
+          </div>
+
+          <div class="paid-management-grid">
+            <section class="panel paid-list-panel">
+              <div class="table-wrap"><table><thead><tr><th>신청자</th><th>영수증</th><th>결제</th><th>RIASEC</th><th>담당자</th><th>상태</th><th></th></tr></thead><tbody id="paidAssessmentBody"></tbody></table></div>
+            </section>
+            <aside class="panel paid-detail-panel" id="paidAssessmentDetail" aria-live="polite"></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-workforce">
+          <div class="view-toolbar"><div><p class="section-kicker">장기 여정</p><h2>인력 전환 관리</h2><p>학업·한국어·체류 이력을 바탕으로 취업 준비 가능 시점을 관리합니다.</p></div><button class="primary-button" id="newMatchButton">＋ 매칭 후보 등록</button></div>
+          <div class="workforce-board">
+            <section class="board-column"><div class="board-title"><span>준비 진단</span><strong>3</strong></div><div id="workforceDiagnosis"></div></section>
+            <section class="board-column"><div class="board-title"><span>역량 보완</span><strong>2</strong></div><div id="workforceTraining"></div></section>
+            <section class="board-column"><div class="board-title"><span>기업 매칭</span><strong>3</strong></div><div id="workforceMatching"></div></section>
+            <section class="board-column"><div class="board-title"><span>정착 관리</span><strong>2</strong></div><div id="workforcePlaced"></div></section>
+          </div>
+        </section>
+
+        <section class="view" id="view-reports">
+          <div class="view-toolbar"><div><p class="section-kicker">자동 문서</p><h2>보고서 센터</h2><p>수업 기록과 평가 결과를 교사 검토 후 학생용 PDF로 출력합니다.</p></div><button class="primary-button" id="generateReportTop">보고서 만들기</button></div>
+          <div class="report-layout">
+            <section class="panel report-builder">
+              <div class="panel-header"><div><p class="section-kicker">새 보고서</p><h3>코스 종합 리포트</h3></div><span class="positive-label">템플릿 v0.1</span></div>
+              <label class="field-label">학생<select id="reportStudentSelect"></select></label>
+              <label class="field-label">보고 과정<select id="reportCourseSelect"><option>초급 1</option><option>초급 2</option><option>중급 1</option><option>중급 2</option><option>TOPIK 1·2급</option><option>TOPIK 3·4급</option><option>TOPIK 5·6급</option></select></label>
+              <label class="field-label">보고서 언어<select id="reportLanguage"><option value="vi" selected>Tiếng Việt</option><option value="ko">한국어</option></select></label>
+              <div class="report-includes"><span>포함 항목</span><label><input type="checkbox" checked> 출결 요약</label><label><input type="checkbox" checked> 성적 추이</label><label><input type="checkbox" checked> 수업 태도</label><label><input type="checkbox" checked> 교사 종합 의견</label><label><input type="checkbox" checked> 다음 단계 제안</label><label data-advanced-topik-only hidden><input type="checkbox" checked> TOPIK 분석</label><label data-advanced-topik-only hidden><input type="checkbox" checked> 쓰기 평가</label></div>
+              <label class="field-label">교사 최종 의견<textarea id="teacherComment" rows="5">수업 참여와 과제 수행이 안정적이며 배운 문법과 어휘를 문장에 적용하는 능력이 향상되었습니다. 다음 과정에서는 취약한 영역을 반복 학습하고 실제 의사소통 연습을 확대할 것을 권장합니다.</textarea></label>
+              <button class="primary-button full-button" id="generateReport">미리보기 생성</button>
+            </section>
+            <section class="panel report-history">
+              <div class="panel-header"><div><p class="section-kicker">최근 생성</p><h3>전달 대기 보고서</h3></div><span class="count-badge" id="reportHistoryCount">0건</span></div>
+              <div class="report-list" id="reportList"></div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
   </div>
-</div>
 
-<main id="main">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">KROSS Đà Nẵng · Du học Hàn Quốc</span>
-        <h1>Không chỉ làm hồ sơ.<br><span>KROSS xây lộ trình</span> từ tiếng Hàn đến việc làm.</h1>
-        <p>Đánh giá học lực, tài chính, tiếng Hàn và mục tiêu nghề nghiệp để chọn đúng tuyến: D-4 học tiếng, D-2 chuyên ngành, hoặc lộ trình chuyển tiếp an toàn hơn.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#tu-van">Nhận lộ trình miễn phí</a>
-          <a class="btn btn-ghost" href="#truong">Xem trường phù hợp</a>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="student-drawer" id="studentDrawer" aria-hidden="true">
+    <button class="drawer-close" id="drawerClose" aria-label="상세 닫기">×</button>
+    <div id="studentDrawerContent"></div>
+  </aside>
+
+  <div class="modal-backdrop" id="studentModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="studentModalTitle">
+      <div class="modal-header"><div><p class="section-kicker">신규 리드</p><h2 id="studentModalTitle">학생 등록</h2></div><button class="icon-button" id="closeStudentModal" aria-label="닫기">×</button></div>
+      <form id="studentForm">
+        <div class="form-grid">
+          <label class="field-label">이름<input name="name" required placeholder="학생 이름"></label>
+          <label class="field-label">연락처<input name="phone" required placeholder="090 000 0000"></label>
+          <label class="field-label">희망 과정<select name="course"><option>초급 1</option><option>초급 2</option><option>중급 1</option><option>중급 2</option><option>TOPIK 1·2급</option><option>TOPIK 3·4급</option><option>TOPIK 5·6급</option></select></label>
+          <label class="field-label">현재 단계<select name="stage"><option>상담</option><option>어학</option><option>유학</option><option>인력</option></select></label>
         </div>
-        <div class="hero-micro">
-          <span class="badge"><span class="badge-dot"></span> Văn phòng tại Đà Nẵng</span>
-          <span class="badge"><span class="badge-dot"></span> Tư vấn 1:1 qua Zalo</span>
-          <span class="badge"><span class="badge-dot"></span> Theo sát D-4 → D-2</span>
-        </div>
-      </div>
-      <div class="hero-visual" aria-label="KROSS roadmap visual">
-        <div class="plane-line"></div>
-        <div class="photo-card photo-main"></div>
-        <div class="photo-card photo-person"></div>
-        <div class="float-stat">
-          <div class="icon">路</div>
-          <div><strong>Roadmap cá nhân hóa</strong><span>Không chọn trường theo cảm tính. Chọn theo hồ sơ, chi phí và mục tiêu thật.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="trust-strip" aria-label="Điểm tin cậy">
-    <div class="wrap">
-      <div class="trust-grid">
-        <div class="trust-item"><strong>Đà Nẵng</strong><span>Văn phòng địa phương, phụ huynh có thể gặp trực tiếp</span></div>
-        <div class="trust-item"><strong>D-4 → D-2</strong><span>Lộ trình học tiếng rồi chuyển chuyên ngành rõ ràng</span></div>
-        <div class="trust-item"><strong>1:1</strong><span>Mỗi hồ sơ có người phụ trách, không xử lý đại trà</span></div>
-        <div class="trust-item"><strong>Việc làm</strong><span>Tư duy sau tốt nghiệp ngay từ lúc chọn trường</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section diagnostic" id="visa">
-    <div class="wrap">
-      <span class="eyebrow">Chọn tuyến trước khi chọn trường</span>
-      <h2>Bạn nên đi D-4, D-2 hay học thêm tại Việt Nam trước?</h2>
-      <p class="lead">Nhiều hồ sơ rớt không phải vì trường khó, mà vì chọn sai tuyến từ đầu. KROSS dùng 3 câu hỏi: tiếng Hàn hiện tại, học lực, và ngân sách gia đình.</p>
-      <div class="choice-grid">
-        <article class="choice-card">
-          <span class="pill">Tuyến an toàn</span>
-          <h3>D-4 học tiếng</h3>
-          <p>Phù hợp nếu chưa có TOPIK, cần sang Hàn học tiếng trước khi vào chuyên ngành.</p>
-          <ul><li>Chưa cần TOPIK khi bắt đầu</li><li>Học tại viện ngôn ngữ của đại học</li><li>Cần quản lý chi phí năm đầu kỹ</li></ul>
-        </article>
-        <article class="choice-card">
-          <span class="pill">Tuyến nhanh</span>
-          <h3>D-2 chuyên ngành</h3>
-          <p>Phù hợp nếu đã có nền tiếng Hàn, hồ sơ học tập rõ và muốn vào thẳng cử nhân/thạc sĩ.</p>
-          <ul><li>Thường cần TOPIK theo yêu cầu trường</li><li>Có cơ hội hỗ trợ chi phí theo năng lực</li><li>Áp lực học thuật cao hơn</li></ul>
-        </article>
-        <article class="choice-card">
-          <span class="pill">Tuyến chuẩn bị</span>
-          <h3>Học ở Đà Nẵng trước</h3>
-          <p>Phù hợp nếu gia đình cần tối ưu ngân sách và giảm rủi ro phỏng vấn.</p>
-          <ul><li>Xây nền phát âm và phản xạ</li><li>Chuẩn bị câu trả lời phỏng vấn</li><li>Giảm sốc ngôn ngữ khi sang Hàn</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="hoc-vien">
-    <div class="wrap">
-      <div class="students-head">
-        <div>
-          <span class="eyebrow">Học viên KROSS</span>
-          <h2>Phải có người thật, câu chuyện thật</h2>
-          <p class="lead">Phần này hiện để dạng template. Khi có ảnh học viên, tên, trường và feedback thật, thay trực tiếp vào 3 card dưới đây. Đây là khu vực tăng niềm tin mạnh nhất.</p>
-        </div>
-        <a class="btn btn-ghost" href="#tu-van">Tôi muốn được đánh giá hồ sơ</a>
-      </div>
-      <div class="student-grid">
-        <article class="student-card">
-          <div class="student-photo"></div>
-          <div class="student-body"><strong>Nguyễn T. A</strong><span>Dự kiến: Kwangwoon · D-4</span><p>“KROSS giúp em hiểu rõ lộ trình D-4 rồi chuyển D-2, không còn chọn trường theo tin đồn.”</p></div>
-        </article>
-        <article class="student-card">
-          <div class="student-photo"></div>
-          <div class="student-body"><strong>Trần M. H</strong><span>Dự kiến: Sejong · D-2</span><p>“Điều em cần nhất là bảng chi phí rõ ràng và checklist hồ sơ từng bước.”</p></div>
-        </article>
-        <article class="student-card">
-          <div class="student-photo"></div>
-          <div class="student-body"><strong>Lê P. N</strong><span>Dự kiến: Kookmin · D-4</span><p>“Phụ huynh của em được tư vấn trực tiếp nên yên tâm hơn trước khi quyết định.”</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section universities" id="truong">
-    <div class="wrap">
-      <div class="section-top">
-        <div>
-          <span class="eyebrow">Trường đại học</span>
-          <h2>Không phải trường nào ở Hàn cũng phù hợp với bạn</h2>
-          <p class="lead">KROSS phân nhóm trường theo khu vực, chi phí, ngành mạnh và độ phù hợp hồ sơ. Mỗi bài trường là một landing page SEO riêng.</p>
-        </div>
-        <a class="btn btn-navy" href="#tu-van">Đề xuất trường cho tôi</a>
-      </div>
-      <div class="uni-grid">
-        <a class="uni-card" href="truong/dai-hoc-kwangwoon.html"><div class="uni-img" data-kr="광운대학교"></div><div class="uni-body"><h3>Đại học Kwangwoon</h3><p>Seoul, mạnh về điện tử, CNTT, robot. Phù hợp học sinh định hướng kỹ thuật.</p><div class="meta"><span>Seoul</span><span>D-4</span><span>D-2</span></div><span class="more">Xem hồ sơ trường →</span></div></a>
-        <a class="uni-card" href="#tu-van"><div class="uni-img" data-kr="국민대학교"></div><div class="uni-body"><h3>Đại học Kookmin</h3><p>Seoul, nổi bật về thiết kế, ô tô, kinh doanh. Cần kiểm tra ngành theo kỳ.</p><div class="meta"><span>Seoul</span><span>D-4</span><span>D-2</span></div><span class="more">Đang cập nhật →</span></div></a>
-        <a class="uni-card" href="#tu-van"><div class="uni-img" data-kr="세종대학교"></div><div class="uni-body"><h3>Đại học Sejong</h3><p>Seoul, mạnh về khách sạn, du lịch, AI. Phù hợp học sinh muốn ở thủ đô.</p><div class="meta"><span>Seoul</span><span>D-4</span><span>D-2</span></div><span class="more">Đang cập nhật →</span></div></a>
-        <a class="uni-card" href="#tu-van"><div class="uni-img" data-kr="가천대학교"></div><div class="uni-body"><h3>Đại học Gachon</h3><p>Gần Seoul, khuôn viên hiện đại, nhiều ngành thực dụng cho sinh viên quốc tế.</p><div class="meta"><span>Gyeonggi</span><span>D-4</span><span>D-2</span></div><span class="more">Đang cập nhật →</span></div></a>
-        <a class="uni-card" href="#tu-van"><div class="uni-img" data-kr="경기대학교"></div><div class="uni-body"><h3>Đại học Kyonggi</h3><p>Mạnh về du lịch, khách sạn. Cần so sánh cơ sở Seoul và Suwon.</p><div class="meta"><span>Suwon</span><span>D-4</span><span>D-2</span></div><span class="more">Đang cập nhật →</span></div></a>
-        <a class="uni-card" href="#tu-van"><div class="uni-img" data-kr="건국대학교"></div><div class="uni-body"><h3>Đại học Konkuk</h3><p>Đại học tổng hợp lớn tại Seoul, phù hợp hồ sơ tốt và định hướng rõ.</p><div class="meta"><span>Seoul</span><span>D-2</span><span>TOPIK</span></div><span class="more">Đang cập nhật →</span></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section pipeline" id="lo-trinh">
-    <div class="wrap">
-      <span class="eyebrow" style="color:#FF9A8F">KROSS Pipeline</span>
-      <h2>Một tuyến duy nhất: tiếng Hàn → du học → việc làm</h2>
-      <p class="lead">Zila mạnh ở thông tin trường. KROSS cần mạnh ở “đường đi sau khi sang Hàn”. Vì vậy pipeline này vẫn giữ, nhưng đặt sau các bằng chứng tin cậy.</p>
-      <div class="metro-wrap">
-        <svg class="metro-svg" viewBox="0 0 920 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KROSS lộ trình từ Đà Nẵng đến Hàn Quốc">
-          <line x1="82" y1="90" x2="840" y2="90" stroke="#2E5FD4" stroke-width="12" stroke-linecap="round"/>
-          <line x1="82" y1="90" x2="330" y2="90" stroke="#0E6B53" stroke-width="12" stroke-linecap="round"/>
-          <g fill="#fff" font-family="Be Vietnam Pro" text-anchor="middle">
-            <circle cx="92" cy="90" r="19" fill="#0A1738" stroke="#fff" stroke-width="6"/><text x="92" y="142" font-size="15" font-weight="800">Tiếng Hàn</text><text x="92" y="163" font-size="12" fill="#B8C2D9">Đà Nẵng</text>
-            <circle cx="330" cy="90" r="22" fill="#fff" stroke="#0A1738" stroke-width="7"/><text x="330" y="142" font-size="15" font-weight="800">Visa D-4</text><text x="330" y="163" font-size="12" fill="#B8C2D9">học tiếng tại Hàn</text>
-            <circle cx="575" cy="90" r="19" fill="#0A1738" stroke="#fff" stroke-width="6"/><text x="575" y="142" font-size="15" font-weight="800">Visa D-2</text><text x="575" y="163" font-size="12" fill="#B8C2D9">chuyên ngành</text>
-            <circle cx="820" cy="90" r="19" fill="#CB3B2E" stroke="#fff" stroke-width="6"/><text x="820" y="142" font-size="15" font-weight="800">Việc làm</text><text x="820" y="163" font-size="12" fill="#B8C2D9">sau tốt nghiệp</text>
-          </g>
-        </svg>
-      </div>
-      <p class="pipeline-note">KROSS vận hành theo logic dữ liệu thống nhất: thông tin học viên, phụ huynh, trình độ tiếng Hàn, hồ sơ trường, chi phí, visa và mục tiêu việc làm không bị tách rời.</p>
-    </div>
-  </section>
-
-  <section class="section" id="chi-phi">
-    <div class="wrap">
-      <span class="eyebrow">Chi phí tham khảo</span>
-      <h2>Không giấu chi phí, nhưng không đăng con số cũ gây hiểu nhầm</h2>
-      <p class="lead">Zila có bài chi phí rất mạnh để kéo SEO. KROSS cũng cần khu vực chi phí, nhưng dùng dạng “khoảng tham khảo + tư vấn chi tiết theo trường” để giảm rủi ro sai số theo từng kỳ.</p>
-      <div class="cost-grid">
-        <article class="cost-card">
-          <h3>Giai đoạn trước khi bay</h3>
-          <p>Dành cho hồ sơ, dịch thuật, công chứng, visa, vé máy bay, chuẩn bị nhập cảnh và các chi phí phát sinh theo trường.</p>
-          <div class="range">Cần tư vấn theo hồ sơ</div>
-          <ul class="cost-list"><li>Chi phí thay đổi theo trường và kỳ tuyển sinh</li><li>Cần kiểm tra điều kiện tài chính của gia đình</li><li>KROSS gửi bảng chi tiết sau buổi đánh giá</li></ul>
-        </article>
-        <article class="cost-card">
-          <h3>Năm đầu tại Hàn Quốc</h3>
-          <p>Bao gồm chi phí học tập, ký túc xá/nhà ở, sinh hoạt, bảo hiểm và đi lại. Seoul thường cao hơn tỉnh.</p>
-          <div class="range">Theo khu vực</div>
-          <ul class="cost-list"><li>Seoul: cần ngân sách cao hơn</li><li>Khu vực gần Seoul: cân bằng chi phí và cơ hội</li><li>Tỉnh: tối ưu ngân sách hơn nhưng cần xem ngành</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap process-grid">
-      <div>
-        <span class="eyebrow">Quy trình</span>
-        <h2>6 bước để tránh hồ sơ đi sai hướng</h2>
-        <p class="lead">Mỗi bước đều có checklist, người phụ trách và trạng thái theo dõi. Đây là điểm nên kết nối về CRM sau này.</p>
-      </div>
-      <div class="step-list">
-        <div class="step"><div class="step-num">01</div><div><h3>Đánh giá hồ sơ</h3><p>Học lực, tiếng Hàn, tài chính, mục tiêu ngành và khu vực.</p></div></div>
-        <div class="step"><div class="step-num">02</div><div><h3>Chọn tuyến visa</h3><p>D-4, D-2 hoặc học thêm tại Việt Nam trước khi nộp.</p></div></div>
-        <div class="step"><div class="step-num">03</div><div><h3>Chọn trường</h3><p>So sánh điều kiện, chi phí, ngành và rủi ro từng trường.</p></div></div>
-        <div class="step"><div class="step-num">04</div><div><h3>Chuẩn bị hồ sơ</h3><p>Checklist giấy tờ, dịch thuật, công chứng, tài chính.</p></div></div>
-        <div class="step"><div class="step-num">05</div><div><h3>Phỏng vấn & visa</h3><p>Luyện câu trả lời, theo dõi tiến độ và chuẩn bị nhập cảnh.</p></div></div>
-        <div class="step"><div class="step-num">06</div><div><h3>Theo sát tại Hàn</h3><p>Gia hạn, chuyển D-4 → D-2, định hướng làm thêm hợp pháp.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section faq" id="faq">
-    <div class="wrap">
-      <span class="eyebrow">Hỏi đáp</span>
-      <h2>Những câu phụ huynh hỏi trước khi đặt cọc</h2>
-      <div class="faq-list">
-        <details><summary>KROSS có cam kết kết quả visa không?</summary><p>KROSS không dùng cam kết tuyệt đối. Chúng tôi đánh giá rủi ro hồ sơ, chuẩn bị giấy tờ và phỏng vấn theo quy trình. Kết quả cuối cùng phụ thuộc vào trường, cơ quan xét duyệt và hồ sơ thực tế.</p></details>
-        <details><summary>Chưa biết tiếng Hàn thì bắt đầu như thế nào?</summary><p>Bắt đầu bằng kiểm tra nền tảng và lớp hỗ trợ ngôn ngữ tại Đà Nẵng. Sau đó chọn tuyến D-4 hoặc tiếp tục nâng trình trước khi nộp.</p></details>
-        <details><summary>Có nên chọn trường ở Seoul không?</summary><p>Seoul có nhiều cơ hội nhưng chi phí cao hơn. Nếu ngân sách gia đình nhạy cảm, nên so sánh thêm khu vực gần Seoul hoặc trường tỉnh có ngành phù hợp.</p></details>
-        <details><summary>Khi nào nhận bảng chi phí chi tiết?</summary><p>Sau khi KROSS có thông tin học lực, mục tiêu, trường dự kiến và tình trạng tiếng Hàn. Bảng chi tiết phải theo kỳ tuyển sinh mới nhất để tránh dùng số liệu cũ.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-section" id="tu-van">
-    <div class="wrap cta-layout">
-      <div class="cta-card">
-        <span class="eyebrow" style="color:#FF9A8F">Bắt đầu hôm nay</span>
-        <h2>Nhận lộ trình du học Hàn Quốc miễn phí</h2>
-        <p class="lead">Điền thông tin, tư vấn viên KROSS sẽ liên hệ qua Zalo trong 24 giờ làm việc.</p>
-        <div class="cta-points">
-          <div class="cta-point">Đánh giá nên đi D-4, D-2 hay học thêm tại Việt Nam</div>
-          <div class="cta-point">Đề xuất nhóm trường theo hồ sơ và ngân sách</div>
-          <div class="cta-point">Gửi checklist giấy tờ và bảng chi phí theo kỳ gần nhất</div>
-        </div>
-      </div>
-      <form class="lead-form" onsubmit="event.preventDefault(); submitLead();">
-        <div class="form-field"><label for="f-name">Họ và tên</label><input id="f-name" type="text" placeholder="Nguyễn Văn A" autocomplete="name"></div>
-        <div class="form-field"><label for="f-phone">Số điện thoại / Zalo</label><input id="f-phone" type="tel" placeholder="09xx xxx xxx" autocomplete="tel"></div>
-        <div class="form-field"><label for="f-level">Trình độ tiếng Hàn</label><select id="f-level"><option>Chưa học</option><option>Đang học sơ cấp</option><option>TOPIK 1–2</option><option>TOPIK 3 trở lên</option></select></div>
-        <div class="form-field"><label for="f-goal">Mục tiêu</label><select id="f-goal"><option>Du học tiếng D-4</option><option>Đại học / thạc sĩ D-2</option><option>Chưa rõ, cần tư vấn</option></select></div>
-        <div class="form-field full"><label for="f-time">Thời gian muốn đi Hàn</label><select id="f-time"><option>Trong 6 tháng tới</option><option>Trong 1 năm tới</option><option>Chưa xác định</option></select></div>
-        <button class="btn btn-gold" type="submit">Gửi thông tin — nhận tư vấn miễn phí</button>
-        <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+        <label class="field-label">메모<textarea name="note" rows="3" placeholder="상담 시 확인할 내용을 입력하세요."></textarea></label>
+        <div class="modal-actions"><button type="button" class="secondary-button" id="cancelStudentModal">취소</button><button type="submit" class="primary-button">등록 완료</button></div>
       </form>
     </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h4>KROSS — Tư vấn du học Hàn Quốc</h4>
-        <p>Văn phòng: 282 Nguyễn Tri Phương, Thạc Gián, Đà Nẵng<br>Hotline/Zalo: 0900 000 000<br>Email: studyinkross@gmail.com</p>
-        <p style="margin-top:12px;font-size:12.5px">Thông tin trường, visa và chi phí cần xác nhận lại theo thông báo chính thức từng kỳ. KROSS không sử dụng cam kết tuyệt đối về kết quả visa.</p>
-      </div>
-      <div><h4>Lộ trình</h4><ul><li><a href="#visa">D-4 / D-2</a></li><li><a href="#chi-phi">Chi phí tham khảo</a></li><li><a href="#lo-trinh">KROSS Pipeline</a></li><li><a href="#faq">Hỏi đáp</a></li></ul></div>
-      <div><h4>Trường</h4><ul><li><a href="truong/dai-hoc-kwangwoon.html">Kwangwoon</a></li><li><a href="#truong">Danh sách trường</a></li><li><a href="#tu-van">Đề xuất trường</a></li></ul></div>
-    </div>
-    <div class="foot-bottom"><span>© 2026 KROSS. Đà Nẵng, Việt Nam.</span><span class="kr">From Dream to Goal · 한국 유학의 모든 여정</span></div>
   </div>
-</footer>
 
-<aside class="pc-float" aria-label="Tư vấn nhanh">
-  <strong>Nhận lộ trình du học riêng</strong>
-  <p>Gửi thông tin, KROSS đánh giá lộ trình D-4 / D-2 và chi phí theo hồ sơ của bạn.</p>
-  <a class="btn btn-primary" href="#tu-van">Tư vấn miễn phí</a>
-  <a class="btn btn-ghost" href="https://zalo.me/0900000000">Zalo KROSS</a>
-</aside>
+  <div class="modal-backdrop" id="scheduleModal" aria-hidden="true">
+    <div class="modal schedule-modal" role="dialog" aria-modal="true" aria-labelledby="scheduleModalTitle">
+      <div class="modal-header"><div><p class="section-kicker">주간 반복 일정</p><h2 id="scheduleModalTitle">시간표 등록</h2></div><button class="icon-button" id="closeScheduleModal" aria-label="닫기">×</button></div>
+      <form id="scheduleForm">
+        <div class="form-grid">
+          <label class="field-label">과정<select name="courseId" id="scheduleCourse" required></select></label>
+          <label class="field-label">반 이름<input name="groupName" required placeholder="예: SC1 저녁반"></label>
+          <label class="field-label">담당 교사<select name="teacherId" id="scheduleTeacher" required></select></label>
+          <label class="field-label">강의실<input name="room" placeholder="예: 2층 A강의실"></label>
+          <fieldset class="field-label weekday-field"><legend>요일 (복수 선택)</legend><div class="weekday-options"><label><input type="checkbox" name="weekdays" value="1">월</label><label><input type="checkbox" name="weekdays" value="2">화</label><label><input type="checkbox" name="weekdays" value="3">수</label><label><input type="checkbox" name="weekdays" value="4">목</label><label><input type="checkbox" name="weekdays" value="5">금</label><label><input type="checkbox" name="weekdays" value="6">토</label><label><input type="checkbox" name="weekdays" value="7">일</label></div></fieldset>
+          <label class="field-label">시작 시간<input name="startTime" type="time" value="18:30" required></label>
+          <label class="field-label">종료 시간<input name="endTime" type="time" value="20:00" required></label>
+          <label class="field-label">운영 시작일<input name="effectiveFrom" type="text" inputmode="numeric" placeholder="DD/MM/YY" pattern="\d{2}/\d{2}/(?:\d{2}|\d{4})" required></label>
+          <label class="field-label">운영 종료일<input name="effectiveTo" type="text" inputmode="numeric" placeholder="DD/MM/YY" pattern="\d{2}/\d{2}/(?:\d{2}|\d{4})"></label>
+        </div>
+        <fieldset class="class-roster-field"><legend>이 반의 학생</legend><p>선택한 학생만 출결 화면에 표시됩니다.</p><div class="class-roster-list" id="scheduleStudentRoster"></div></fieldset>
+        <div class="schedule-conflict-box" id="scheduleConflictBox" hidden role="alert"></div>
+        <div class="modal-actions"><button type="button" class="danger-button" id="deleteSchedule" hidden>시간표 삭제</button><span class="modal-action-spacer"></span><button type="button" class="secondary-button" id="cancelScheduleModal">취소</button><button type="submit" class="primary-button" id="saveScheduleButton">시간표 저장</button></div>
+      </form>
+    </div>
+  </div>
 
-<nav class="mobile-bar" aria-label="Liên hệ nhanh">
-  <a href="tel:0900000000"><strong>Gọi</strong><span>Hotline</span></a>
-  <a href="https://zalo.me/0900000000"><strong>Zalo</strong><span>Chat ngay</span></a>
-  <a class="main" href="#tu-van"><strong>Tư vấn</strong><span>Miễn phí</span></a>
-</nav>
+  <div class="report-preview" id="reportPreview" aria-hidden="true">
+    <div class="preview-toolbar no-print"><button class="secondary-button" id="closeReportPreview">← 돌아가기</button><div><strong>코스 종합 리포트</strong><span>내용 확인 후 PDF로 저장하세요.</span></div><button class="primary-button" id="printReport">PDF로 출력</button></div>
+    <article class="print-report" id="printReportContent"></article>
+  </div>
 
-<script src="assets/js/kross-v2.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
